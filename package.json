@@ -6,10 +6,11 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"preview": "zcli themes:preview --port=5500",
-		"build:css": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/style.css --watch",
+		"build:css": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./style.css --watch",
 		"build:js": "webpack --mode production",
 		"watch:js": "webpack --mode development --watch",
-		"start": "npm-run-all --parallel build:css watch:js"
+		"start": "npm-run-all --parallel build:css watch:js",
+		"build:all": "npm-run-all --parallel build:css build:js"
 	},
 	"author": "Process Improvement",
 	"license": "ISC",

@@ -3,8 +3,8 @@ const path = require("path");
 module.exports = {
 	entry: "./assets/scripts/index.js", // Entry point for your custom scripts
 	output: {
-		filename: "bundle.js", // Output bundle file
-		path: path.resolve(__dirname, "assets"), // Output directory
+		filename: "script.js", // Output bundle file
+		path: path.resolve(__dirname), // Output directory
 	},
 	module: {
 		rules: [
