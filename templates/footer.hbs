@@ -1,0 +1,38 @@
+<footer class="w-full p-4 bg-gray-200 text-neutral-content">
+	<div class="footer max-w-7xl mx-auto items-center">
+		<aside class="items-center">
+			{{#link "help_center" class="text-black font-bolds"}}
+				{{help_center.name}}
+			{{/link}}
+		</aside>
+		<nav
+			class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
+		>
+			{{#if alternative_locales}}
+				<div class="dropdown dropdown-top dropdown-end">
+					<div
+						tabindex="0"
+						role="button"
+						class="btn bg-gray-400 hover:bg-gray-500 border-0 text-black m-1"
+					>{{current_locale.name}}</div>
+					<ul
+						tabindex="0"
+						class="dropdown-content z-[1] menu p-2 shadow bg-gray-300 rounded-box w-52"
+					>
+						{{#each alternative_locales}}
+							<li>
+								<a
+									href="{{url}}"
+									dir="{{direction}}"
+									class="text-black hover:bg-gray-400"
+								>
+									{{name}}
+								</a>
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			{{/if}}
+		</nav>
+	</div>
+</footer>

@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "daisyui";
+
+/* Do not change this */
+html,
+body {
+	background-color: white;
+	color: black;
+	min-height: 100vh;
+}
+
+/* Search bar style */
+input#query {
+	width: 100%;
+}
+
+/* Breadcrumbs style */
+ul.breadcrumbs,
+ol.breadcrumbs {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 8px;
+	font-size: 12px;
+}
+
+ul.breadcrumbs > li > a:hover,
+ol.breadcrumbs > li > a:hover {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+ul.breadcrumbs > li::after,
+ol.breadcrumbs > li::after {
+	content: ">";
+	margin-left: 4px;
+}
+
+ul.breadcrumbs > li:last-child:after,
+ol.breadcrumbs > li:last-child:after {
+	content: "";
+}
+
+/* Sidebar Style */
+section.related-articles > h2.related-articles-title {
+	display: none;
+}
+
+section.related-articles > ul {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 8px;
+}
+
+section.related-articles > ul > li > a:hover {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}

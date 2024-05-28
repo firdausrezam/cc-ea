@@ -1,0 +1,31 @@
+{
+	"name": "Custom Commerce EA",
+	"author": "Process Improvement",
+	"version": "1.0.1",
+	"api_version": 3,
+	"default_locale": "en-us",
+	"settings": [
+		{
+			"label": "brand_group_label",
+			"variables": [
+				{
+					"identifier": "logo",
+					"type": "file",
+					"description": "EA FC Mobile Logo",
+					"label": "logo_label"
+				}
+			]
+		},
+		{
+			"label": "brand_banner",
+			"variables": [
+				{
+					"identifier": "banner",
+					"type": "file",
+					"description": "Banner for EA FC Mobile",
+					"label": "logo_label"
+				}
+			]
+		}
+	]
+}
