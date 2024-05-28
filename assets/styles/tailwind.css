@@ -63,3 +63,134 @@ section.related-articles > ul > li > a:hover {
 	text-decoration: underline;
 	text-underline-offset: 2px;
 }
+
+/* Forms */
+.form {
+	max-width: 650px;
+}
+
+.form-field ~ .form-field {
+	margin-top: 25px;
+}
+
+.form-field label {
+	display: block;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+.form-field input {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 10px;
+	width: 100%;
+	background-color: white;
+	font-size: 14px;
+}
+
+.form-field input:focus {
+	border: 1px solid black;
+}
+
+.form-field input[type="text"] {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.form-field input[type="text"]:focus,
+.form-field textarea:focus {
+	border: 1px solid black;
+}
+
+.form-field input[type="checkbox"] {
+	width: auto;
+}
+
+.form-field .nesty-input {
+	border-radius: 4px;
+	height: 40px;
+	line-height: 40px;
+	outline: none;
+	vertical-align: middle;
+}
+
+.form-field .nesty-input:focus {
+	border: 1px solid black;
+	text-decoration: none;
+}
+
+.form-field .hc-multiselect-toggle:focus {
+	outline: none;
+	border: 1px solid black;
+	text-decoration: none;
+}
+
+.form-field textarea {
+	vertical-align: middle;
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: 100%;
+	min-height: 100px;
+	padding: 4px;
+	font-size: 14px;
+}
+
+.form-field p#request_description_hint {
+	display: none;
+}
+
+form footer input[type="submit"] {
+	width: 100%;
+	margin-top: 16px;
+	border-radius: 4px;
+	background-color: #262626;
+	color: white;
+	padding: 8px 12px;
+	cursor: pointer;
+}
+
+.form-field input[type="checkbox"] + label {
+	margin: 0 0 0 10px;
+}
+
+.form-field .optional {
+	color: lighten(black, 20%);
+	margin-left: 4px;
+}
+
+.form-field p {
+	color: lighten(black, 20%);
+	font-size: 12px;
+	margin: 5px 0;
+}
+
+.form footer {
+	margin-top: 40px;
+	padding-top: 30px;
+}
+
+.form footer a {
+	color: lighten(black, 20%);
+	cursor: pointer;
+	margin-right: 15px;
+}
+
+.form .suggestion-list {
+	font-size: 13px;
+	margin-top: 30px;
+}
+
+.form .suggestion-list label {
+	border-bottom: 1px solid #ddd;
+	display: block;
+	padding-bottom: 5px;
+}
+
+.form .suggestion-list li {
+	padding: 10px 0;
+}
+
+.form .suggestion-list li a:visited {
+	color: lightblue;
+}

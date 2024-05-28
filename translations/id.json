@@ -58,6 +58,7 @@
 	"request_list_beta_description": "Pengguna dapat mengurutkan dan filter permintaan, menambah dan menghapus kolom",
 	"request_list_beta_label": "Pengalaman daftar permintaan baru",
 	"request_list_group_label": "Daftar permintaan",
+	"request_description_hint": "Silakan masukkan detail permintaan Anda. Seorang anggota staf dukungan kami akan merespons sesegera mungkin.",
 	"scoped_community_search_description": "Hasil pencarian dibatasi untuk topik yang dimasuki pengguna",
 	"scoped_community_search_label": "Pencarian dalam cakupan di Komunitas",
 	"scoped_knowledge_base_search_description": "Hasil pencarian dibatasi untuk kategori yang dimasuki pengguna",
