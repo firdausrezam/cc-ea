@@ -54,16 +54,28 @@
 					<div class="collapse-content">
 						<div class="flex flex-col items-start gap-2 pt-5">
 							{{related_articles}}
-							{{!-- <a
-								class="text-black hover:underline"
-								href="{{url}}"
-							>
-								{{title}}
-							</a> --}}
 						</div>
 					</div>
 				</div>
 			{{/if}}
+			<div class="collapse collapse-arrow join-item border border-white">
+				<input type="radio" name="my-accordion-4" />
+				<div
+					class="collapse-title text-xl font-medium text-white bg-black"
+				>
+					Contact Us
+				</div>
+				<div class="collapse-content">
+					<div class="flex flex-col items-start gap-2 pt-5">
+						<a
+							href="{{page_path 'new_request'}}"
+							class="text-black hover:underline"
+						>
+							Submit a ticket
+						</a>
+					</div>
+				</div>
+			</div>
 		</aside>
 
 		{{! Content Goes Here }}
