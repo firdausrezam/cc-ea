@@ -1,8 +1,2 @@
-/******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
-/*!*********************************!*\
-  !*** ./assets/scripts/index.js ***!
-  \*********************************/
-
-/******/ })()
-;
+document.addEventListener("DOMContentLoaded",(function(){var e=document.getElementById("mobile-dropdown"),n=document.getElementById("mobile-dropdown-button"),o=window.innerWidth,d=!1;window.addEventListener("load",(function(){if(window.location.hash){var e=window.location.hash.split("#")[1];document.getElementById("accordion-".concat(e)).setAttribute("checked","checked"),document.getElementById(e).scrollIntoView({behavior:"smooth"})}})),window.addEventListener("resize",(function(){(o=window.innerWidth)<768&&d?(e.classList.remove("hidden"),e.classList.add("flex")):(e.classList.remove("flex"),e.classList.add("hidden"))})),n.addEventListener("click",(function(){d=!d,o<768&&d?(e.classList.remove("hidden"),e.classList.add("flex")):(e.classList.remove("flex"),e.classList.add("hidden"))})),console.log("mobile-dropdown component",e),console.log("mobile-dropdown-button component",n)}));
+//# sourceMappingURL=script.js.map

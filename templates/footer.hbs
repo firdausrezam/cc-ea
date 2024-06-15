@@ -1,10 +1,12 @@
 <footer class="w-full p-4 bg-gray-200 text-neutral-content">
-	<div class="footer max-w-7xl mx-auto items-center">
-		<aside class="items-center">
-			{{#link "help_center" class="text-black font-bolds"}}
-				{{help_center.name}}
+	<div
+		class="footer max-w-7xl mx-auto flex items-center justify-between flex-wrap"
+	>
+		<div class="items-center">
+			{{#link "help_center"}}
+				<img src="{{settings.logo}}" alt="Logo" class="w-[150px]" />
 			{{/link}}
-		</aside>
+		</div>
 		<nav
 			class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
 		>
