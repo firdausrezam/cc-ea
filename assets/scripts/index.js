@@ -1,8 +1,12 @@
+import "./survey.js";
+
 document.addEventListener("DOMContentLoaded", () => {
 	const mobileDropdown = document.getElementById("mobile-dropdown");
 	const mobileDropdownButton = document.getElementById(
 		"mobile-dropdown-button"
 	);
+	const surveyModal = document.getElementById("survey-modal");
+	const closeSurveyModalBtn = document.getElementById("close-survey-modal");
 	let windowWidth = window.innerWidth;
 	let expandMobileDropdown = false;
 
@@ -55,6 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		toggleMobileDropdown();
 	});
 
-	console.log("mobile-dropdown component", mobileDropdown);
-	console.log("mobile-dropdown-button component", mobileDropdownButton);
+	if (closeSurveyModalBtn) {
+		closeSurveyModalBtn.addEventListener("click", () => {
+			surveyModal.classList.add("hidden");
+		});
+	}
 });

@@ -1,0 +1,139 @@
+<section id="infobar" class="w-full p-4 bg-black/75">
+	<div class="marquee">
+		<ul class="marquee__content">
+			<li class="text-white font-semibold">📢Lorem ipsum dolor sit amet
+				consectetur adipisicing elit. Impedit reiciendis numquam
+				corrupti dolore, ex enim? Voluptate beatae aperiam nulla quo.</li>
+			<li class="text-white font-semibold">📢Lorem ipsum dolor sit amet
+				consectetur adipisicing elit. Impedit reiciendis</li>
+		</ul>
+
+		<ul aria-hidden="true" class="marquee__content">
+			<li class="text-white font-semibold">📢Lorem ipsum dolor sit amet
+				consectetur adipisicing elit. Impedit reiciendis numquam
+				corrupti dolore, ex enim? Voluptate beatae aperiam nulla quo.</li>
+			<li class="text-white font-semibold">📢Lorem ipsum dolor sit amet
+				consectetur adipisicing elit. Impedit reiciendis</li>
+		</ul>
+	</div>
+</section>
+
+<section id="banner" class="w-full min-h-[250px] md:h-[300px]">
+	<img
+		src="{{settings.banner}}"
+		alt="banner"
+		class="w-full min-h-[250px] object-cover object-center"
+	/>
+</section>
+
+<section
+	id="main-content"
+	class="flex-1 md:max-w-7xl mx-auto flex items-center justify-center px-4 sm:px-0 pb-8 pt-8 sm:pt-0"
+>
+	<div class="w-full flex flex-col gap-4">
+		<h4 class="text-4xl font-bold">
+			End User Survey
+		</h4>
+		<p id="brands-name" class="hidden">
+			{{help_center.name}}
+		</p>
+
+		<div class="mt-8">
+			<label class="text-lg">
+				Overall, how satisfied are you with our Help Center?
+			</label>
+			<div class="flex flex-col gap-2 mt-4">
+				<div class="flex-1 flex items-center gap-2 bg-gray-200 p-2">
+					<input
+						id="satisfied"
+						type="radio"
+						name="satisfaction"
+						class="radio border-2 border-gray-300"
+						value="Satisfied"
+						checked="checked"
+					/>
+					<label for="satisfied" class="flex-1 hover:cursor-pointer">
+						Satisfied
+					</label>
+				</div>
+				<div class="flex-1 flex items-center gap-2 bg-gray-200 p-2">
+					<input
+						id="somewhat-satisfied"
+						type="radio"
+						name="satisfaction"
+						class="radio border-2 border-gray-300"
+						value="Somewhat satisfied"
+					/>
+					<label
+						for="somewhat-satisfied"
+						class="flex-1 cursor-pointer"
+					>
+						Somewhat satisfied
+					</label>
+				</div>
+				<div class="flex-1 flex items-center gap-2 bg-gray-200 p-2">
+					<input
+						id="somewhat-dissatisfied"
+						type="radio"
+						name="satisfaction"
+						class="radio border-2 border-gray-300"
+						value="Somewhat dissatisfied"
+					/>
+					<label
+						for="somewhat-dissatisfied"
+						class="flex-1 cursor-pointer"
+					>
+						Somewhat dissatisfied
+					</label>
+				</div>
+				<div class="flex-1 flex items-center gap-2 bg-gray-200 p-2">
+					<input
+						id="dissatisfied"
+						type="radio"
+						name="satisfaction"
+						class="radio border-2 border-gray-300"
+						value="Dissatisfied"
+					/>
+					<label for="dissatisfied" class="flex-1 cursor-pointer">
+						Dissatisfied
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-control mt-8">
+			<legend class="text-lg">
+				What could we do to improve our Help Center?
+			</legend>
+			<textarea
+				rows="5"
+				name="suggestion"
+				id="suggestion-input"
+				class="w-full textarea textarea-bordered border-gray-300 focus:outline-gray-200 bg-white mt-4"
+			></textarea>
+		</div>
+
+		<button
+			id="submit-survey"
+			type="submit"
+			class="btn btn-block bg-gray-800 text-white rounded-md mt-8"
+		>
+			Submit
+		</button>
+	</div>
+</section>
+
+<dialog id="success-modal" class="modal">
+	<div class="modal-box bg-white border border-gray-800">
+		<h3 class="text-lg font-bold text-gray-800">Survey submitted
+			successfully!</h3>
+		<p class="py-4 text-gray-800">Thank you for participating in this
+			survey! Your feedback is really important to us</p>
+		<div class="modal-action">
+			<a
+				href="/hc/{{help_center.locale}}"
+				class="btn bg-gray-800 text-white"
+			>Back to homepage</a>
+		</div>
+	</div>
+</dialog>

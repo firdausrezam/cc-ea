@@ -1,5 +1,9 @@
 module.exports = {
-	content: ["./templates/*.{html,hbs}", "./assets/**/*.css"],
+	content: [
+		"./templates/*.{html,hbs}",
+		"./templates/**/*.hbs",
+		"./assets/**/*.css",
+	],
 	theme: {
 		extend: {
 			animation: {
@@ -18,5 +22,8 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require("daisyui")],
+	plugins: [
+		require("@tailwindcss/forms")({ strategy: "class" }),
+		require("daisyui"),
+	],
 };
