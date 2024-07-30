@@ -1,14 +1,10 @@
 const path = require("path");
-const { library } = require("webpack");
 
 module.exports = {
-	entry: "./assets/scripts/index.js", // Entry point for your custom scripts
+	entry: "./assets/scripts/index.js",
 	output: {
 		filename: "script.js", // Output bundle file
 		path: path.resolve(__dirname), // Output directory,
-		library: {
-			type: "module",
-		},
 	},
 	module: {
 		rules: [
@@ -32,11 +28,8 @@ module.exports = {
 			},
 		],
 	},
-	experiments: {
-		outputModule: true,
-	},
 	resolve: {
-		extensions: [".js", ".json"],
+		extensions: ["", ".js", ".json"],
 	},
 	devtool: "source-map", // Optional: generate source maps for easier debugging
 };

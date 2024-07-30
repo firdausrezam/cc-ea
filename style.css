@@ -2430,12 +2430,12 @@ details.collapse summary::-webkit-details-marker {
   top: 0.5rem;
 }
 
-.z-\[1\] {
-  z-index: 1;
-}
-
 .z-50 {
   z-index: 50;
+}
+
+.z-\[1\] {
+  z-index: 1;
 }
 
 .m-1 {
@@ -2718,10 +2718,6 @@ details.collapse summary::-webkit-details-marker {
 .border-gray-800 {
   --tw-border-opacity: 1;
   border-color: rgb(31 41 55 / var(--tw-border-opacity));
-}
-
-.bg-black\/75 {
-  background-color: rgb(0 0 0 / 0.75);
 }
 
 .bg-fc-dark {
@@ -3254,11 +3250,6 @@ form footer input[type="submit"] {
 
   .sm\:w-\[75\%\] {
     width: 75%;
-  }
-
-  .sm\:w-max {
-    width: -moz-max-content;
-    width: max-content;
   }
 
   .sm\:max-w-5xl {
