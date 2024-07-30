@@ -1,52 +1,62 @@
 <section id="infobar-container" class="w-full flex flex-col">
-	<div
-		role="alert"
-		class="infobar-component alert flex items-center alert-success bg-fc-green border-x-0 border-t-0 border-b border-fc-dark px-4 py-2 rounded-none"
-	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			class="h-6 w-6 shrink-0 stroke-current"
+	<div class="infobar-component bg-fc-green border-b border-fc-dark">
+		<div
+			role="alert"
+			class="alert alert-success bg-fc-green flex items-center max-w-7xl mx-auto border-x-0 border-y-0 px-4 py-2 rounded-none"
 		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-			></path>
-		</svg>
-		<span class="text-sm text-start font-semibold">Lorem, ipsum dolor sit
-			amet consectetur adipisicing elit. A commodi nihil delectus sunt, ad
-			labore nam impedit numquam hic aliquam?</span>
-		<span class="infobar-dismiss ms-auto cursor-pointer">
-			<i class="ph ph-x"></i>
-		</span>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				class="h-6 w-6 shrink-0 stroke-current"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+				></path>
+			</svg>
+			<div id="infobar-content">
+				<p class="text-sm text-start font-semibold">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
+					commodi nihil delectus sunt, ad labore nam impedit numquam
+					hic aliquam?
+				</p>
+			</div>
+			<span class="infobar-dismiss ms-auto cursor-pointer">
+				<i class="ph ph-x"></i>
+			</span>
+		</div>
 	</div>
 
-	<div
-		role="alert"
-		class="infobar-component alert flex items-center alert-error bg-fc-green border-x-0 border-t-0 border-b border-fc-dark px-4 py-2 rounded-none"
-	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="h-6 w-6 shrink-0 stroke-current"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="#ef4444"
+	<div class="infobar-component bg-fc-green border-b border-fc-dark">
+		<div
+			role="alert"
+			class="alert alert-error bg-fc-green flex items-center max-w-7xl mx-auto border-x-0 border-y-0 px-4 py-2 rounded-none"
 		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-			/>
-		</svg>
-		<span class="text-sm text-start font-semibold">Error! Task failed
-			successfully</span>
-		<span class="infobar-dismiss ms-auto cursor-pointer">
-			<i class="ph ph-x"></i>
-		</span>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-6 w-6 shrink-0 stroke-current"
+				fill="none"
+				viewBox="0 0 24 24"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+				/>
+			</svg>
+			<div id="infobar-content">
+				<p class="text-sm text-start font-semibold">
+					Error! Task failed successfully
+				</p>
+			</div>
+			<span class="infobar-dismiss ms-auto cursor-pointer">
+				<i class="ph ph-x"></i>
+			</span>
+		</div>
 	</div>
 </section>
 
@@ -59,36 +69,33 @@
 </section>
 
 <section id="main-content" class="w-full">
-	<section id="faq-section" class="flex-1 py-8">
-		<article class="flex-1 md:max-w-7xl mx-auto flex flex-col px-4 xl:px-0">
-			<h3 class="text-2xl md:text-3xl font-bold">
-				FAQs
-			</h3>
-			<p class="mt-2">
-				Please find the most frequently asked questions from our
-				customer in this section
+	<section id="channels" class="flex-1 bg-fc-dark py-8">
+		<article
+			class="flex-1 md:max-w-7xl mx-auto flex flex-col items-center px-4 xl:px-0"
+		>
+			<h3 class="text-2xl text-white md:text-3xl font-bold">Contact Our
+				Customer Support</h3>
+			<p class="mt-2 text-white text-center">
+				You can reach the Customer Support team via these channels below
 			</p>
-
-			<div class="w-full grid sm:grid-cols-2 grid-cols-1 gap-4 mt-4">
-				{{#each categories}}
-
-					{{#each sections}}
-						{{#is name "FAQ"}}
-							{{#each articles}}
-								<a
-									id="article-{{id}}"
-									href="{{url}}"
-									class="btn bg-fc-dark hover:bg-fc-dark/95 w-full flex text-white text-start hover:underline rounded-md overflow-x-hidden"
-								>
-									<span class="w-full line-clamp-1">
-										{{title}}
-									</span>
-								</a>
-							{{/each}}
-						{{/is}}
-					{{/each}}
-
-				{{/each}}
+			<div class="flex items-center flex-col md:flex-row gap-2 mt-4">
+				<button
+					class="btn w-full md:w-max bg-[#4267B2] hover:bg-[#4267B2]/85 text-white"
+				>
+					<i class="ph ph-messenger-logo text-white text-2xl"></i>
+					Connect with Facebook
+				</button>
+				<button
+					class="btn w-full md:w-max bg-[#25D366] hover:bg-[#25D366]/85 text-white"
+				>
+					<i class="ph ph-whatsapp-logo text-white text-2xl"></i>
+					Connect with Whatsapp
+				</button>
+				<button
+					class="btn w-full md:w-max bg-fc-green hover:bg-fc-green/85 text-white"
+				>
+					Create a Ticket
+				</button>
 			</div>
 		</article>
 	</section>
@@ -96,14 +103,14 @@
 	<section id="all-articles-section" class="flex-1 bg-fc-dark py-8">
 		<article class="flex-1 md:max-w-7xl mx-auto flex flex-col px-4 xl:px-0">
 			<h3 class="text-2xl text-white md:text-3xl font-bold">
-				Other Helpful Articles
+				Our Helpful Articles
 			</h3>
-			<p class="mt-2 text-white">
+			<p class="mt-2 text-white text-sm">
 				Please find the most frequently asked questions from our
 				customer in this section
 			</p>
 
-			<div class="w-full grid sm:grid-cols-2 grid-cols-1 gap-4 mt-8">
+			<div class="w-full flex flex-col gap-4 mt-8">
 				{{#each categories}}
 					{{#is name "EA"}}
 						{{#each sections}}
@@ -127,11 +134,12 @@
 								{{#if (compare article_count ">" 5)}}
 									<a
 										href="{{url}}"
-										class="btn bg-fc-green/85 hover:bg-fc-green text-white"
+										class="btn flex items-center w-max bg-fc-green/85 hover:bg-fc-green text-fc-dark"
 									>
 										See more
 										{{name}}
 										articles
+										<i class="ph ph-arrow-up-right"></i>
 									</a>
 								{{/if}}
 							</div>
@@ -141,71 +149,4 @@
 			</div>
 		</article>
 	</section>
-	<section class="flex-1 flex flex-col items-center px-4 xl:px-0">
-		<section
-			id="search-section"
-			class="w-full sm:w-[75%] lg:w-[50%] flex flex-col items-center py-12"
-		>
-			<h3 class="text-2xl text-center md:text-3xl font-bold">
-				Can't find article to solve your issue?
-			</h3>
-			<p class="text-center mt-2">
-				Please search for further articles below to resolve your current
-				issue
-			</p>
-
-			<section class="w-full lg:w-[75%] sm:max-w-5xl mx-auto mt-4">
-				<label
-					class="input input-bordered flex flex-1 items-center gap-2 bg-transparent"
-				>
-					{{search instant=true submit=false class="w-full text-sm"}}
-					{{! <input type="text" class="grow" placeholder="Search" /> }}
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 16 16"
-						fill="currentColor"
-						class="w-4 h-4 opacity-70"
-					>
-						<path
-							fill-rule="evenodd"
-							d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-							clip-rule="evenodd"
-						/>
-					</svg>
-				</label>
-			</section>
-
-			<p class="text-center mt-4">
-				or
-			</p>
-
-			<a
-				href="{{page_path 'new_request'}}"
-				class="btn text-sm text-fc-dark font-bold uppercase border-0 bg-fc-green/85 hover:bg-fc-green rounded-md mt-4"
-			>
-				Create a ticket
-			</a>
-		</section>
-	</section>
 </section>
-
-<div
-	id="survey-modal"
-	class="hidden modal-box w-full flex-col items-center z-50 fixed bottom-0 right-0 bg-white border sm:me-4 sm:mb-4"
->
-	<form method="dialog">
-		<button
-			id="close-survey-modal"
-			class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-		>✕</button>
-	</form>
-	<h3 class="font-bold text-lg text-center">Help us to improve!</h3>
-	<p class="py-4 text-center">Your feedback about our help center is really
-		helpful to us.</p>
-	<a
-		href="/hc/{{help_center.locale}}/p/survey"
-		class="w-max mx-auto btn bg-fc-green hover:bg-fc-green/85 text-fc-dark border-0"
-	>
-		Start Survey
-	</a>
-</div>

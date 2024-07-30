@@ -206,6 +206,11 @@ form footer input[type="submit"] {
 	margin: 0 auto;
 }
 
+#article-content p {
+	background-color: transparent;
+	color: #fff;
+}
+
 /* Marquee */
 .marquee {
 	--gap: 1rem;

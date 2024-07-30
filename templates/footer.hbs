@@ -1,68 +1,15 @@
-{{!-- <footer class="w-full p-4 bg-gray-200 text-neutral-content">
-	<div
-		class="footer max-w-7xl mx-auto flex items-center justify-between flex-wrap"
-	>
-		<div class="items-center">
+<footer class="w-full bg-fc-green text-base-content px-4 py-10">
+	<section class="footer max-w-7xl mx-auto">
+		<aside>
 			{{#link "help_center"}}
 				<img src="{{settings.logo}}" alt="Logo" class="w-[150px]" />
 			{{/link}}
-		</div>
+		</aside>
 		<nav
-			class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
+			class="text-fc-dark flex flex-col md:items-end md:justify-end md:place-self-end md:self-center"
 		>
-			{{#if alternative_locales}}
-				<div class="dropdown dropdown-top dropdown-end">
-					<div
-						tabindex="0"
-						role="button"
-						class="btn bg-gray-400 hover:bg-gray-500 border-0 text-black m-1"
-					>{{current_locale.name}}</div>
-					<ul
-						tabindex="0"
-						class="dropdown-content z-[1] menu p-2 shadow bg-gray-300 rounded-box w-52"
-					>
-						{{#each alternative_locales}}
-							<li>
-								<a
-									href="{{url}}"
-									dir="{{direction}}"
-									class="text-black hover:bg-gray-400"
-								>
-									{{name}}
-								</a>
-							</li>
-						{{/each}}
-					</ul>
-				</div>
-			{{/if}}
+			<a href="#" class="link link-hover">Terms and Conditions</a>
+			<a href="#" class="link link-hover">Privacy Policy</a>
 		</nav>
-	</div>
-</footer> --}}
-
-<footer class="footer bg-fc-green text-base-content p-10">
-	<aside>
-		{{#link "help_center"}}
-			<img src="{{settings.logo}}" alt="Logo" class="w-[150px]" />
-		{{/link}}
-	</aside>
-	<nav class="text-fc-dark">
-		<h6 class="footer-title opacity-100">Services</h6>
-		<a class="link link-hover">Branding</a>
-		<a class="link link-hover">Design</a>
-		<a class="link link-hover">Marketing</a>
-		<a class="link link-hover">Advertisement</a>
-	</nav>
-	<nav class="text-fc-dark">
-		<h6 class="footer-title opacity-100">Company</h6>
-		<a class="link link-hover">About us</a>
-		<a class="link link-hover">Contact</a>
-		<a class="link link-hover">Jobs</a>
-		<a class="link link-hover">Press kit</a>
-	</nav>
-	<nav class="text-fc-dark">
-		<h6 class="footer-title opacity-100">Legal</h6>
-		<a class="link link-hover">Terms of use</a>
-		<a class="link link-hover">Privacy policy</a>
-		<a class="link link-hover">Cookie policy</a>
-	</nav>
+	</section>
 </footer>
