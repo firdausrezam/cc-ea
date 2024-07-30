@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	let windowWidth = window.innerWidth;
 	let expandMobileDropdown = false;
 
+	if (surveyModal) {
+		setTimeout(() => {
+			surveyModal.classList.add("flex");
+			surveyModal.classList.remove("hidden");
+		}, 3000);
+	}
+
 	window.addEventListener("load", () => {
 		if (window.location.hash) {
 			const articleId = window.location.hash.split("#")[1];

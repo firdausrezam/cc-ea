@@ -188,3 +188,24 @@
 		</section>
 	</section>
 </section>
+
+<div
+	id="survey-modal"
+	class="hidden modal-box w-full flex-col items-center z-50 fixed bottom-0 right-0 bg-white border sm:me-4 sm:mb-4"
+>
+	<form method="dialog">
+		<button
+			id="close-survey-modal"
+			class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+		>✕</button>
+	</form>
+	<h3 class="font-bold text-lg text-center">Help us to improve!</h3>
+	<p class="py-4 text-center">Your feedback about our help center is really
+		helpful to us.</p>
+	<a
+		href="/hc/{{help_center.locale}}/p/survey"
+		class="w-max mx-auto btn bg-fc-green hover:bg-fc-green/85 text-fc-dark border-0"
+	>
+		Start Survey
+	</a>
+</div>
