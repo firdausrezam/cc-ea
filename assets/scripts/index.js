@@ -1,4 +1,6 @@
 import "./survey.js";
+import "./infobar.js";
+import "./article_page.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const mobileDropdown = document.getElementById("mobile-dropdown");

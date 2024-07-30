@@ -16,6 +16,8 @@ body {
 main {
 	height: 100%;
 	min-height: 100vh;
+	display: flex !important;
+	flex-direction: column;
 }
 
 /* Search bar style */

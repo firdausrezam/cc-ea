@@ -1,4 +1,4 @@
-<footer class="w-full p-4 bg-gray-200 text-neutral-content">
+{{!-- <footer class="w-full p-4 bg-gray-200 text-neutral-content">
 	<div
 		class="footer max-w-7xl mx-auto flex items-center justify-between flex-wrap"
 	>
@@ -37,4 +37,32 @@
 			{{/if}}
 		</nav>
 	</div>
+</footer> --}}
+
+<footer class="footer bg-fc-green text-base-content p-10">
+	<aside>
+		{{#link "help_center"}}
+			<img src="{{settings.logo}}" alt="Logo" class="w-[150px]" />
+		{{/link}}
+	</aside>
+	<nav class="text-fc-dark">
+		<h6 class="footer-title opacity-100">Services</h6>
+		<a class="link link-hover">Branding</a>
+		<a class="link link-hover">Design</a>
+		<a class="link link-hover">Marketing</a>
+		<a class="link link-hover">Advertisement</a>
+	</nav>
+	<nav class="text-fc-dark">
+		<h6 class="footer-title opacity-100">Company</h6>
+		<a class="link link-hover">About us</a>
+		<a class="link link-hover">Contact</a>
+		<a class="link link-hover">Jobs</a>
+		<a class="link link-hover">Press kit</a>
+	</nav>
+	<nav class="text-fc-dark">
+		<h6 class="footer-title opacity-100">Legal</h6>
+		<a class="link link-hover">Terms of use</a>
+		<a class="link link-hover">Privacy policy</a>
+		<a class="link link-hover">Cookie policy</a>
+	</nav>
 </footer>

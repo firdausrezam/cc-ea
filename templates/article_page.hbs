@@ -6,7 +6,10 @@
 	/>
 </section>
 
-<section id="main-content" class="max-w-7xl mx-auto py-8">
+<section
+	id="main-content"
+	class="flex-1 h-full max-w-7xl flex flex-col mx-auto px-4 lg:px-0 py-8"
+>
 	<div class="w-full">
 		<a
 			href="{{page_path 'help_center'}}"
@@ -16,73 +19,50 @@
 			Back to Homepage
 		</a>
 	</div>
-	<section class="w-full flex gap-4 mt-4">
+	<section class="flex-1 flex flex-col md:flex-row gap-4 mt-4">
 		<aside
 			id="section-sidebar"
-			class="join join-vertical w-full sm:w-[25%] border border-black/50 h-max"
+			class="w-full md:w-[25%] h-max menu rounded-box p-0 gap-2"
 		>
-			<div class="collapse collapse-arrow join-item border border-white">
-				<input type="radio" name="my-accordion-4" checked="checked" />
-				<div
-					class="collapse-title text-xl font-medium text-white bg-black"
-				>
-					{{section.name}}
-				</div>
-				<div class="collapse-content">
-					<div class="flex flex-col items-start gap-2 pt-5">
-						{{#each section.articles}}
-							<a
-								class="text-black hover:underline"
-								href="{{url}}"
-							>
-								{{title}}
-							</a>
-						{{/each}}
-					</div>
-				</div>
-			</div>
-			{{#if related_articles}}
-				<div
-					class="collapse collapse-arrow join-item border border-white"
-				>
-					<input type="radio" name="my-accordion-4" />
-					<div
-						class="collapse-title text-xl font-medium text-white bg-black"
-					>
-						Related Articles
-					</div>
-					<div class="collapse-content">
-						<div class="flex flex-col items-start gap-2 pt-5">
-							{{related_articles}}
-						</div>
-					</div>
-				</div>
-			{{/if}}
-			<div class="collapse collapse-arrow join-item border border-white">
-				<input type="radio" name="my-accordion-4" />
-				<div
-					class="collapse-title text-xl font-medium text-white bg-black"
-				>
-					Contact Us
-				</div>
-				<div class="collapse-content">
-					<div class="flex flex-col items-start gap-2 pt-5">
-						<a
-							href="{{page_path 'new_request'}}"
-							class="text-black hover:underline"
-						>
-							Submit a ticket
+			<li>
+				<a href="#" class="bg-fc-green hover:bg-fc-green font-semibold">
+					{{article.title}}
+				</a>
+			</li>
+			{{#if promoted_articles}}
+				{{#each promoted_articles}}
+					<li>
+						<a href="{{url}}" class="hover:bg-fc-green">
+							{{title}}
 						</a>
-					</div>
-				</div>
-			</div>
+					</li>
+				{{/each}}
+			{{/if}}
 		</aside>
 
 		{{! Content Goes Here }}
-		<article id="content" class="flex-1 flex flex-col p-4 gap-4">
+		<article
+			id="content"
+			class="flex-1 flex flex-col px-0 md:px-4 py-4 md:py-0 gap-4 border-t md:border-t-0 md:border-l border-fc-dark/55"
+		>
 			<h1 class="text-2xl font-bold">
 				{{article.title}}
 			</h1>
+			<div class="w-full flex items-center mt-2">
+				<div class="avatar">
+					<div class="w-10 rounded-full">
+						<img src="{{article.author.avatar_url}}" />
+					</div>
+				</div>
+				<div class="flex flex-col ms-4">
+					<h5
+						class="text-sm font-semibold"
+					>{{article.author.name}}</h5>
+					<p id="article-created" class="text-xs text-gray-400">
+						{{article.created_at}}
+					</p>
+				</div>
+			</div>
 			<p class="text-base">
 				{{article.body}}
 			</p>

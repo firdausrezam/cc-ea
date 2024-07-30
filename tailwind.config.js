@@ -6,6 +6,10 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			colors: {
+				"fc-green": "#07F468",
+				"fc-dark": "#1A1C19",
+			},
 			animation: {
 				marquee: "marquee 30s linear infinite",
 				marquee2: "marquee2 30s linear infinite",

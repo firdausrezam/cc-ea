@@ -2,7 +2,7 @@
 	{{t "skip_navigation"}}
 </a> --}}
 
-<header class="w-full bg-gray-200">
+<header class="w-full bg-fc-dark">
 	<nav class="navbar w-full md:max-w-7xl mx-auto py-4">
 		<div class="navbar-start w-max">
 			{{#link "help_center"}}
@@ -22,7 +22,7 @@
 						class="h-5 w-5"
 						fill="none"
 						viewBox="0 0 24 24"
-						stroke="currentColor"
+						stroke="#FFF"
 					><path
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -31,28 +31,38 @@
 						/></svg>
 				</div>
 			</div>
-			<label
-				class="input input-bordered hidden md:flex items-center gap-2 bg-white"
-			>
-				{{search
-					instant=true
-					submit=false
-					class="min-w-[250px] sm:w-[350px] border-none focus:outline-none"
-				}}
-				{{! <input type="text" class="grow" placeholder="Search" /> }}
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 16 16"
-					fill="currentColor"
-					class="w-4 h-4 opacity-70"
+
+			{{#if alternative_locales}}
+				<div
+					class="hidden md:inline-block dropdown dropdown-bottom dropdown-end"
 				>
-					<path
-						fill-rule="evenodd"
-						d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-						clip-rule="evenodd"
-					/>
-				</svg>
-			</label>
+					<div
+						tabindex="0"
+						role="button"
+						class="btn flex items-center justify-center p-4 bg-fc-green hover:bg-fc-green/85 border-0 text-white"
+					>
+						<span class="flex items-center justify-center">
+							<i class="ph ph-globe" style="font-size: 18px;"></i>
+						</span>
+					</div>
+					<ul
+						tabindex="0"
+						class="dropdown-content z-[1] menu p-2 gap-2 shadow bg-white rounded-box w-max mt-2"
+					>
+						{{#each alternative_locales}}
+							<li>
+								<a
+									href="{{url}}"
+									dir="{{direction}}"
+									class="text-fc-dark hover:bg-fc-green"
+								>
+									{{name}}
+								</a>
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			{{/if}}
 
 			{{#unless signed_in}}
 				{{#link "sign_in" class=""}}
@@ -62,12 +72,12 @@
 
 			{{#if signed_in}}
 				<div
-					class="hidden md:inline-block dropdown dropdown-bottom dropdown-end ml-4"
+					class="hidden md:inline-block dropdown dropdown-bottom dropdown-end ms-2"
 				>
 					<div
 						tabindex="0"
 						role="button"
-						class="btn btn-link items-center no-underline hover:no-underline text-black m-1"
+						class="btn btn-link items-center no-underline hover:no-underline text-white m-1"
 					>
 						<div class="avatar">
 							<div class="w-8 rounded-full">
@@ -75,19 +85,19 @@
 							</div>
 						</div>
 						{{user_name}}
-						<i class="ph ph-caret-down text-lg text-black"></i>
+						<i class="ph ph-caret-down text-lg text-white"></i>
 					</div>
 					<ul
 						tabindex="0"
 						class="dropdown-content z-[1] menu p-2 shadow bg-white rounded-lg w-52"
 					>
-						<li class="hover:bg-gray-200 rounded-lg">
+						<li class="hover:bg-fc-green rounded-lg">
 							<a href="{{page_path 'new_request'}}">
 								Submit a ticket
 							</a>
 						</li>
 						{{#if signed_in}}
-							<li class="hover:bg-gray-200 rounded-lg">
+							<li class="hover:bg-fc-green rounded-lg">
 								<a href="{{page_path 'sign_out'}}">
 									Sign out
 								</a>
@@ -98,25 +108,35 @@
 			{{/if}}
 		</div>
 	</nav>
-	<div id="mobile-dropdown" class="w-full p-4 hidden flex-col gap-4 bg-white">
-		<label
-			class="input input-bordered border-base-200 w-full flex items-center gap-2 bg-white"
-		>
-			{{search instant=true submit=false class="flex-1"}}
-			{{! <input type="text" class="grow" placeholder="Search" /> }}
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 16 16"
-				fill="currentColor"
-				class="w-4 h-4 opacity-70"
-			>
-				<path
-					fill-rule="evenodd"
-					d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-					clip-rule="evenodd"
-				/>
-			</svg>
-		</label>
+	<div id="mobile-dropdown" class="w-full p-4 hidden flex-col gap-2 bg-white">
+		{{#if alternative_locales}}
+			<div class="join join-vertical w-full">
+				<div class="collapse collapse-arrow join-item rounded-none">
+					<input type="checkbox" name="my-accordion-4" />
+					<div
+						class="collapse-title flex items-center text-md font-medium px-0"
+					>
+						<span class="flex items-center justify-center me-2">
+							<i class="ph ph-globe" style="font-size: 20px;"></i>
+						</span>
+						Change Language
+					</div>
+					<div class="collapse-content">
+						<div class="flex flex-col w-full gap-1.5">
+							{{#each alternative_locales}}
+								<a
+									href="{{url}}"
+									dir="{{direction}}"
+									class="text-fc-dark text-sm hover:bg-fc-green px-2 py-3 rounded-md font-semibold"
+								>
+									{{name}}
+								</a>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		{{/if}}
 
 		{{#unless signed_in}}
 			{{#link "sign_in" class=""}}
@@ -142,12 +162,15 @@
 						<div class="flex flex-col w-full gap-2">
 							<a
 								href="{{page_path 'new_request'}}"
-								class="hover:underline underline-offset-1 py-2"
+								class="text-sm font-semibold hover:bg-fc-green p-2 rounded-md"
 							>
 								Submit a ticket
 							</a>
 							{{#if signed_in}}
-								<a href="{{page_path 'sign_out'}}">
+								<a
+									href="{{page_path 'sign_out'}}"
+									class="text-sm font-semibold hover:bg-fc-green p-2 rounded-md"
+								>
 									Sign out
 								</a>
 							{{/if}}
