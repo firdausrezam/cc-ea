@@ -3367,6 +3367,11 @@ form footer input[type="submit"] {
   background-color: rgb(7 244 104 / 0.85);
 }
 
+.hover\:text-fc-dark:hover {
+  --tw-text-opacity: 1;
+  color: rgb(26 28 25 / var(--tw-text-opacity));
+}
+
 .hover\:text-fc-dark-green:hover {
   --tw-text-opacity: 1;
   color: rgb(4 149 63 / var(--tw-text-opacity));
