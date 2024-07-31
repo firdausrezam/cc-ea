@@ -83,6 +83,7 @@ section.related-articles > ul > li > a:hover {
 	display: block;
 	font-size: 13px;
 	margin-bottom: 5px;
+	color: #fff;
 }
 
 .form-field input {
@@ -150,8 +151,8 @@ form footer input[type="submit"] {
 	width: 100%;
 	margin-top: 16px;
 	border-radius: 4px;
-	background-color: #262626;
-	color: white;
+	background-color: #07f468;
+	color: #1a1c19;
 	padding: 8px 12px;
 	cursor: pointer;
 }
@@ -161,12 +162,12 @@ form footer input[type="submit"] {
 }
 
 .form-field .optional {
-	color: lighten(black, 20%);
+	color: lighten(#fff, 20%);
 	margin-left: 4px;
 }
 
 .form-field p {
-	color: lighten(black, 20%);
+	color: lighten(#fff, 20%);
 	font-size: 12px;
 	margin: 5px 0;
 }
@@ -177,7 +178,7 @@ form footer input[type="submit"] {
 }
 
 .form footer a {
-	color: lighten(black, 20%);
+	color: lighten(#fff, 20%);
 	cursor: pointer;
 	margin-right: 15px;
 }

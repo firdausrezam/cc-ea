@@ -2622,6 +2622,10 @@ details.collapse summary::-webkit-details-marker {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -2714,6 +2718,10 @@ details.collapse summary::-webkit-details-marker {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -3112,6 +3120,7 @@ section.related-articles > ul > li > a:hover {
   display: block;
   font-size: 13px;
   margin-bottom: 5px;
+  color: #fff;
 }
 
 .form-field input {
@@ -3179,8 +3188,8 @@ form footer input[type="submit"] {
   width: 100%;
   margin-top: 16px;
   border-radius: 4px;
-  background-color: #262626;
-  color: white;
+  background-color: #07f468;
+  color: #1a1c19;
   padding: 8px 12px;
   cursor: pointer;
 }
@@ -3190,12 +3199,12 @@ form footer input[type="submit"] {
 }
 
 .form-field .optional {
-  color: lighten(black, 20%);
+  color: lighten(#fff, 20%);
   margin-left: 4px;
 }
 
 .form-field p {
-  color: lighten(black, 20%);
+  color: lighten(#fff, 20%);
   font-size: 12px;
   margin: 5px 0;
 }
@@ -3206,7 +3215,7 @@ form footer input[type="submit"] {
 }
 
 .form footer a {
-  color: lighten(black, 20%);
+  color: lighten(#fff, 20%);
   cursor: pointer;
   margin-right: 15px;
 }
@@ -3370,6 +3379,10 @@ form footer input[type="submit"] {
     max-width: 80rem;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -3398,6 +3411,11 @@ form footer input[type="submit"] {
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:text-3xl {
