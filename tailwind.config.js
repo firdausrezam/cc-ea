@@ -7,6 +7,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				"fc-dark-green": "#04953F",
 				"fc-green": "#07F468",
 				"fc-dark": "#1A1C19",
 			},
