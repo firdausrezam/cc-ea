@@ -33,12 +33,12 @@
 			</div>
 
 			<label
-				class="input input-bordered hidden md:flex items-center gap-2 bg-white focus:border-fc-green focus:outline-fc-green focus-within:outline-fc-green focus-within:border-fc-green"
+				class="input input-bordered hidden h-[32px] md:flex items-center gap-2 rounded-full bg-white focus:border-fc-green focus:outline-fc-green focus-within:outline-fc-green focus-within:border-fc-green"
 			>
 				{{search
 					instant=true
 					submit=false
-					class="min-w-[250px] sm:w-[350px] border-none focus:outline-none"
+					class="min-w-[250px] sm:w-[250px] border-none focus:outline-none text-sm"
 				}}
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@
 					role="button"
 					class="flex items-center justify-center p-2"
 				>
-					<span class="flex items-center text-white">
+					<span class="flex items-center text-white text-sm">
 						<i
 							class="ph ph-globe text-white text-xl me-2"
 						></i>
@@ -85,8 +85,12 @@
 					{{/each}}
 				</ul>
 			</div>
+			{{/if}}
+
+			<a href="{{page_path 'new_request'}}" class="hidden md:inline-flex btn btn-link no-underline hover:no-underline text-white hover:text-fc-green px-2">
+				Submit a Request
+			</a>
 		</div>
-		{{/if}}
 	</nav>
 	<div
 		id="mobile-dropdown"
@@ -146,7 +150,7 @@
 			href="{{page_path 'new_request'}}"
 			class="text-sm text-white font-semibold hover:bg-fc-green p-2 rounded-md"
 		>
-			Submit a ticket
+			Submit a Request
 		</a>
 	</div>
 </header>

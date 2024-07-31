@@ -72,5 +72,17 @@
 	"text_font_description": "Font for body text",
 	"text_font_label": "Text Font",
 	"visited_link_color_description": "Text color for visited link elements",
-	"visited_link_color_label": "Visited link color"
+	"visited_link_color_label": "Visited link color",
+	"contact_our_cs": "Contact Our Customer Support",
+	"contact_our_cs_subtitle": "You can reach the Customer Support team via these channels below",
+	"connect_fb": "Connect with Facebook",
+	"connect_wa": "Connect with WhatsApp",
+	"our_helpful_articles": "Our Helpful Articles",
+	"our_helpful_articles_subtitle": "Please find our helpful articles to solve your issue in this section",
+	"terms_conditions": "Terms and Conditions",
+	"privacy_policy": "Privacy Policy",
+	"submit_request": "Submit a Request",
+	"issue_still": "Still having an issue?",
+	"issue_still_subtitle": "Create a ticket to our support team to help you investigate further and solve your issue",
+	"back_to_homepage": "Back to Homepage"
 }

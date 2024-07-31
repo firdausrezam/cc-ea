@@ -2670,6 +2670,10 @@ details.collapse summary::-webkit-details-marker {
   height: 300px;
 }
 
+.h-\[32px\] {
+  height: 32px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -3368,6 +3372,11 @@ form footer input[type="submit"] {
   color: rgb(4 149 63 / var(--tw-text-opacity));
 }
 
+.hover\:text-fc-green:hover {
+  --tw-text-opacity: 1;
+  color: rgb(7 244 104 / var(--tw-text-opacity));
+}
+
 .hover\:no-underline:hover {
   text-decoration-line: none;
 }
@@ -3391,6 +3400,10 @@ form footer input[type="submit"] {
 }
 
 @media (min-width: 640px) {
+  .sm\:w-\[250px\] {
+    width: 250px;
+  }
+
   .sm\:w-\[350px\] {
     width: 350px;
   }
@@ -3418,6 +3431,10 @@ form footer input[type="submit"] {
     display: flex;
   }
 
+  .md\:inline-flex {
+    display: inline-flex;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -3430,9 +3447,8 @@ form footer input[type="submit"] {
     width: 25%;
   }
 
-  .md\:w-max {
-    width: -moz-max-content;
-    width: max-content;
+  .md\:w-\[250px\] {
+    width: 250px;
   }
 
   .md\:max-w-7xl {

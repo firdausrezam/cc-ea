@@ -73,27 +73,29 @@
 		<article
 			class="flex-1 md:max-w-7xl mx-auto flex flex-col items-center px-4 xl:px-0"
 		>
-			<h3 class="text-2xl text-white md:text-3xl font-bold">Contact Our
-				Customer Support</h3>
+			<h3 class="text-2xl text-white md:text-3xl font-bold">
+				Contact Our Customer Support
+			</h3>
 			<p class="mt-2 text-white text-center">
 				You can reach the Customer Support team via these channels below
 			</p>
 			<div class="flex items-center flex-col md:flex-row gap-2 mt-4">
 				<button
-					class="btn w-full md:w-max bg-[#4267B2] hover:bg-[#4267B2]/85 text-white"
+					class="btn w-full md:w-[250px] bg-[#4267B2] hover:bg-[#4267B2]/85 text-white"
 				>
 					<i class="ph ph-messenger-logo text-white text-2xl"></i>
 					Connect with Facebook
 				</button>
 				<button
-					class="btn w-full md:w-max bg-[#25D366] hover:bg-[#25D366]/85 text-white"
+					class="btn w-full md:w-[250px] bg-[#25D366] hover:bg-[#25D366]/85 text-white"
 				>
 					<i class="ph ph-whatsapp-logo text-white text-2xl"></i>
 					Connect with Whatsapp
 				</button>
 				<button
-					class="btn w-full md:w-max bg-fc-green hover:bg-fc-green/85 text-white"
+					class="btn w-full md:w-[250px] bg-fc-green hover:bg-fc-green/85 text-white"
 				>
+					<i class="ph ph-envelope text-white text-2xl"></i>
 					Create a Ticket
 				</button>
 			</div>
@@ -116,14 +118,14 @@
 						{{#each sections}}
 							<div class="w-full flex flex-col gap-2">
 								<h4
-									class="font-semibold text-white text-lg"
+									class="font-bold text-white text-lg"
 								>{{name}}</h4>
 								{{#each articles}}
 									{{#if (compare @index "<" 5)}}
 										<a
 											id="article-{{id}}"
 											href="{{url}}"
-											class="btn btn-outline border-fc-green hover:border-fc-green hover:bg-fc-green w-full flex text-white text-start rounded-md overflow-x-hidden"
+											class="btn btn-outline border-fc-green hover:border-fc-green hover:bg-fc-green w-full flex font-bold text-white text-start rounded-md overflow-x-hidden"
 										>
 											<span class="w-full line-clamp-1">
 												{{title}}
