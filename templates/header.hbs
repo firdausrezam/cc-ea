@@ -54,58 +54,39 @@
 				</svg>
 			</label>
 
+			{{#if alternative_locales}}
 			<div class="hidden md:inline-block dropdown dropdown-end ms-4">
 				<div
 					tabindex="0"
 					role="button"
 					class="flex items-center justify-center p-2"
 				>
-					<i class="ph ph-list text-white text-xl"></i>
+					<span class="flex items-center text-white">
+						<i
+							class="ph ph-globe text-white text-xl me-2"
+						></i>
+						{{current_locale.name}}
+					</span>
 				</div>
 				<ul
 					tabindex="0"
 					class="dropdown-content menu bg-fc-dark border border-fc-green rounded-md z-[1] w-[200px] p-2 shadow mt-2"
 				>
-					<li>
-						{{#if alternative_locales}}
-							<details open>
-								<summary
-									class="text-white flex items-center justify-between hover:bg-fc-green"
-								>
-									<span class="flex items-center">
-										<i
-											class="ph ph-globe text-white text-xl me-2"
-										></i>
-										{{current_locale.name}}
-									</span>
-								</summary>
-								<ul>
-									{{#each alternative_locales}}
-										<li class="mt-2">
-											<a
-												href="{{url}}"
-												dir="{{direction}}"
-												class="text-white text-sm hover:bg-fc-green px-2 py-3 rounded-md font-semibold"
-											>
-												{{name}}
-											</a>
-										</li>
-									{{/each}}
-								</ul>
-							</details>
-						{{/if}}
-					</li>
-					<li class="mt-2">
-						<a
-							href="{{page_path 'new_request'}}"
-							class="text-sm text-white font-semibold hover:bg-fc-green p-2 rounded-md"
-						>
-							Submit a ticket
-						</a>
-					</li>
+					{{#each alternative_locales}}
+						<li class="{{#if (compare @index ">" 0)}}mt-2{{/if}}">
+							<a
+								href="{{url}}"
+								dir="{{direction}}"
+								class="text-white text-sm hover:bg-fc-green px-2 py-3 rounded-md font-semibold"
+							>
+								{{name}}
+							</a>
+						</li>
+					{{/each}}
 				</ul>
 			</div>
 		</div>
+		{{/if}}
 	</nav>
 	<div
 		id="mobile-dropdown"
