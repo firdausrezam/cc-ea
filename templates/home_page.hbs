@@ -69,45 +69,43 @@
 </section>
 
 <section id="main-content" class="w-full">
-	<section id="channels" class="flex-1 bg-fc-dark py-8">
+	<section id="channels" class="flex-1 bg-white py-8">
 		<article
 			class="flex-1 md:max-w-7xl mx-auto flex flex-col items-center px-4 xl:px-0"
 		>
-			<h3 class="text-2xl text-white md:text-3xl font-bold">
+			<h3 class="text-2xl text-fc-dark md:text-3xl font-bold">
 				Contact Our Customer Support
 			</h3>
-			<p class="mt-2 text-white text-center">
+			<p class="mt-2 text-fc-dark text-center">
 				You can reach the Customer Support team via these channels below
 			</p>
-			<div class="flex items-center flex-col md:flex-row gap-2 mt-4">
-				<button
-					class="btn w-full md:w-[250px] bg-[#4267B2] hover:bg-[#4267B2]/85 text-white"
+			<div
+				class="max-[640px]:w-full flex items-center flex-col sm:flex-row gap-2 mt-4"
+			>
+				<a
+					href="{{page_path 'new_request'}}"
+					class="btn w-full sm:w-[250px] bg-fc-green hover:bg-fc-green/85 border-none text-fc-dark"
 				>
-					<i class="ph ph-messenger-logo text-white text-2xl"></i>
-					Connect with Facebook
-				</button>
-				<button
-					class="btn w-full md:w-[250px] bg-[#25D366] hover:bg-[#25D366]/85 text-white"
-				>
-					<i class="ph ph-whatsapp-logo text-white text-2xl"></i>
-					Connect with Whatsapp
-				</button>
-				<button
-					class="btn w-full md:w-[250px] bg-fc-green hover:bg-fc-green/85 text-white"
-				>
-					<i class="ph ph-envelope text-white text-2xl"></i>
+					<i class="ph ph-envelope text-fc-dark text-2xl"></i>
 					Create a Ticket
-				</button>
+				</a>
+				<a
+					href="https://codashop.com/en-us/"
+					class="btn w-full sm:w-[250px] bg-fc-green hover:bg-fc-green/85 border-none text-fc-dark"
+				>
+					<i class="ph ph-globe text-fc-dark text-2xl"></i>
+					Visit Webstore
+				</a>
 			</div>
 		</article>
 	</section>
 
-	<section id="all-articles-section" class="flex-1 bg-fc-dark py-8">
+	<section id="all-articles-section" class="flex-1 bg-white py-8">
 		<article class="flex-1 md:max-w-7xl mx-auto flex flex-col px-4 xl:px-0">
-			<h3 class="text-2xl text-white md:text-3xl font-bold">
+			<h3 class="text-2xl text-fc-dark md:text-3xl font-bold">
 				Our Helpful Articles
 			</h3>
-			<p class="mt-2 text-white text-sm">
+			<p class="mt-2 text-fc-dark text-sm">
 				Please find the most frequently asked questions from our
 				customer in this section
 			</p>
@@ -118,14 +116,14 @@
 						{{#each sections}}
 							<div class="w-full flex flex-col gap-2">
 								<h4
-									class="font-bold text-white text-lg"
+									class="font-bold text-fc-dark text-lg"
 								>{{name}}</h4>
 								{{#each articles}}
 									{{#if (compare @index "<" 5)}}
 										<a
 											id="article-{{id}}"
 											href="{{url}}"
-											class="btn btn-outline border-fc-green hover:border-fc-green hover:bg-fc-green w-full flex font-bold text-white hover:text-fc-dark text-start rounded-md overflow-x-hidden"
+											class="btn btn-outline border-2 border-fc-green hover:border-fc-green hover:bg-fc-green w-full flex font-bold text-fc-dark text-start rounded-md overflow-x-hidden"
 										>
 											<span class="w-full line-clamp-1">
 												{{title}}
@@ -136,7 +134,7 @@
 								{{#if (compare article_count ">" 5)}}
 									<a
 										href="{{url}}"
-										class="btn btn-link no-underline hover:no-underline flex items-center w-max text-fc-green hover:text-fc-dark-green md:ms-auto"
+										class="btn btn-link no-underline hover:no-underline flex items-center w-max text-fc-dark-green/85 hover:text-fc-dark-green md:ms-auto"
 									>
 										See more
 										{{name}}
@@ -149,6 +147,39 @@
 					{{/is}}
 				{{/each}}
 			</div>
+		</article>
+	</section>
+
+	<section id="search-articles-section" class="flex-1 bg-white py-8">
+		<article class="flex-1 md:max-w-7xl mx-auto flex flex-col px-4 xl:px-0">
+			<h3 class="text-2xl text-fc-dark md:text-3xl text-center font-bold">
+				Didn't see the articles you're looking for?
+			</h3>
+			<p class="mt-4 text-fc-dark text-sm text-center">
+				Please find the articles that you're looking for here
+			</p>
+
+			<label
+				class="input input-bordered h-[32px] w-full sm:w-[350px] lg:w-[500px] flex items-center mx-auto mt-6 gap-2 rounded-full border-fc-dark/50 bg-white focus:border-fc-green focus:outline-fc-green focus-within:outline-fc-green focus-within:border-fc-green"
+			>
+				{{search
+					instant=true
+					submit=false
+					class="min-w-[250px] w-full sm:w-[350px] lg:w-[500px] border-none focus:outline-none text-sm"
+				}}
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 16 16"
+					fill="currentColor"
+					class="w-4 h-4 opacity-70"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</label>
 		</article>
 	</section>
 </section>

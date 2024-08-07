@@ -2436,29 +2436,8 @@ details.collapse summary::-webkit-details-marker {
   }
 }
 
-.btn-sm {
-  height: 2rem;
-  min-height: 2rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  font-size: 0.875rem;
-}
-
 .btn-block {
   width: 100%;
-}
-
-.btn-square:where(.btn-sm) {
-  height: 2rem;
-  width: 2rem;
-  padding: 0px;
-}
-
-.btn-circle:where(.btn-sm) {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 9999px;
-  padding: 0px;
 }
 
 .join.join-vertical {
@@ -2627,6 +2606,10 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 1rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -2656,10 +2639,6 @@ details.collapse summary::-webkit-details-marker {
 
 .h-4 {
   height: 1rem;
-}
-
-.h-5 {
-  height: 1.25rem;
 }
 
 .h-6 {
@@ -2693,10 +2672,6 @@ details.collapse summary::-webkit-details-marker {
 
 .w-4 {
   width: 1rem;
-}
-
-.w-5 {
-  width: 1.25rem;
 }
 
 .w-6 {
@@ -2812,10 +2787,6 @@ details.collapse summary::-webkit-details-marker {
   border-width: 1px;
 }
 
-.border-0 {
-  border-width: 0px;
-}
-
 .border-2 {
   border-width: 2px;
 }
@@ -2843,6 +2814,10 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(26 28 25 / var(--tw-border-opacity));
 }
 
+.border-fc-dark\/50 {
+  border-color: rgb(26 28 25 / 0.5);
+}
+
 .border-fc-green {
   --tw-border-opacity: 1;
   border-color: rgb(7 244 104 / var(--tw-border-opacity));
@@ -2858,16 +2833,6 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
-.bg-\[\#25D366\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 211 102 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#4267B2\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(66 103 178 / var(--tw-bg-opacity));
-}
-
 .bg-fc-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(26 28 25 / var(--tw-bg-opacity));
@@ -2876,10 +2841,6 @@ details.collapse summary::-webkit-details-marker {
 .bg-fc-green {
   --tw-bg-opacity: 1;
   background-color: rgb(7 244 104 / var(--tw-bg-opacity));
-}
-
-.bg-fc-green\/85 {
-  background-color: rgb(7 244 104 / 0.85);
 }
 
 .bg-gray-200 {
@@ -3049,9 +3010,8 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(26 28 25 / var(--tw-text-opacity));
 }
 
-.text-fc-green {
-  --tw-text-opacity: 1;
-  color: rgb(7 244 104 / var(--tw-text-opacity));
+.text-fc-dark-green\/85 {
+  color: rgb(4 149 63 / 0.85);
 }
 
 .text-gray-800 {
@@ -3171,7 +3131,7 @@ section.related-articles > ul > li > a:hover {
   display: block;
   font-size: 13px;
   margin-bottom: 5px;
-  color: #fff;
+  color: #000;
 }
 
 .form-field input {
@@ -3250,12 +3210,12 @@ form footer input[type="submit"] {
 }
 
 .form-field .optional {
-  color: lighten(#fff, 20%);
+  color: lighten(#000, 20%);
   margin-left: 4px;
 }
 
 .form-field p {
-  color: lighten(#fff, 20%);
+  color: lighten(#000, 20%);
   font-size: 12px;
   margin: 5px 0;
 }
@@ -3266,7 +3226,7 @@ form footer input[type="submit"] {
 }
 
 .form footer a {
-  color: lighten(#fff, 20%);
+  color: lighten(#000, 20%);
   cursor: pointer;
   margin-right: 15px;
 }
@@ -3298,7 +3258,6 @@ form footer input[type="submit"] {
 
 #article-content p {
   background-color: transparent;
-  color: #fff;
 }
 
 /* Marquee */
@@ -3350,14 +3309,6 @@ form footer input[type="submit"] {
   border-color: rgb(7 244 104 / var(--tw-border-opacity));
 }
 
-.hover\:bg-\[\#25D366\]\/85:hover {
-  background-color: rgb(37 211 102 / 0.85);
-}
-
-.hover\:bg-\[\#4267B2\]\/85:hover {
-  background-color: rgb(66 103 178 / 0.85);
-}
-
 .hover\:bg-fc-green:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(7 244 104 / var(--tw-bg-opacity));
@@ -3404,6 +3355,12 @@ form footer input[type="submit"] {
   outline-color: #e5e7eb;
 }
 
+@media (max-width: 640px) {
+  .max-\[640px\]\:w-full {
+    width: 100%;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:w-\[250px\] {
     width: 250px;
@@ -3411,6 +3368,10 @@ form footer input[type="submit"] {
 
   .sm\:w-\[350px\] {
     width: 350px;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
   }
 
   .sm\:px-0 {
@@ -3432,10 +3393,6 @@ form footer input[type="submit"] {
     display: inline-block;
   }
 
-  .md\:flex {
-    display: flex;
-  }
-
   .md\:inline-flex {
     display: inline-flex;
   }
@@ -3450,10 +3407,6 @@ form footer input[type="submit"] {
 
   .md\:w-\[25\%\] {
     width: 25%;
-  }
-
-  .md\:w-\[250px\] {
-    width: 250px;
   }
 
   .md\:max-w-7xl {
@@ -3508,6 +3461,10 @@ form footer input[type="submit"] {
 @media (min-width: 1024px) {
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:w-\[500px\] {
+    width: 500px;
   }
 
   .lg\:px-0 {

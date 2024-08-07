@@ -83,7 +83,7 @@ section.related-articles > ul > li > a:hover {
 	display: block;
 	font-size: 13px;
 	margin-bottom: 5px;
-	color: #fff;
+	color: #000;
 }
 
 .form-field input {
@@ -162,12 +162,12 @@ form footer input[type="submit"] {
 }
 
 .form-field .optional {
-	color: lighten(#fff, 20%);
+	color: lighten(#000, 20%);
 	margin-left: 4px;
 }
 
 .form-field p {
-	color: lighten(#fff, 20%);
+	color: lighten(#000, 20%);
 	font-size: 12px;
 	margin: 5px 0;
 }
@@ -178,7 +178,7 @@ form footer input[type="submit"] {
 }
 
 .form footer a {
-	color: lighten(#fff, 20%);
+	color: lighten(#000, 20%);
 	cursor: pointer;
 	margin-right: 15px;
 }
@@ -209,7 +209,6 @@ form footer input[type="submit"] {
 
 #article-content p {
 	background-color: transparent;
-	color: #fff;
 }
 
 /* Marquee */
