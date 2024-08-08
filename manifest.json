@@ -17,19 +17,14 @@
 				{
 					"identifier": "favicon",
 					"type": "file",
-					"description": "EA FC Mobile Favicon",
-					"label": "Icon displayed in the address bar of your browser"
-				}
-			]
-		},
-		{
-			"label": "banner",
-			"variables": [
+					"description": "Icon displayed in the address bar of your browser",
+					"label": "EA FC Mobile Favicon"
+				},
 				{
 					"identifier": "banner",
 					"type": "file",
 					"description": "Banner for EA FC Mobile",
-					"label": "logo_label"
+					"label": "Brand Banner"
 				}
 			]
 		}
