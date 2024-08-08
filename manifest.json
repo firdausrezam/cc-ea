@@ -1,7 +1,7 @@
 {
 	"name": "Custom Commerce EA v2.0",
 	"author": "Process Improvement",
-	"version": "2.0.9",
+	"version": "2.1.0",
 	"api_version": 3,
 	"default_locale": "en-us",
 	"settings": [
@@ -19,7 +19,12 @@
 					"type": "file",
 					"description": "EA FC Mobile Favicon",
 					"label": "Icon displayed in the address bar of your browser"
-				},
+				}
+			]
+		},
+		{
+			"label": "banner",
+			"variables": [
 				{
 					"identifier": "banner",
 					"type": "file",
