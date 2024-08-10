@@ -64,6 +64,28 @@
 				<div id="article-content" class="article-content flex flex-col gap-2">
 					{{article.body}}
 				</div>
+				{{#with article}}
+				<div id="article-votes" class="flex flex-col items-center justify-center mt-4">
+					<h5 class="text-fc-dark text-base">
+						Was this article helpful?
+					</h5>
+					<div class="article-votes-controls mt-2" role="group" aria-labelledby="article-votes-label">
+						{{
+							vote 'up' 
+							role='radio' 
+							class='btn btn-sm btn-outline border-fc-dark hover:bg-fc-dark text-fc-dark hover:text-white'
+						}}
+						{{
+							vote 'down' 
+							role='radio' 
+							class='btn btn-sm btn-outline border-fc-dark hover:bg-fc-dark text-fc-dark hover:text-white'
+						}}
+					</div>
+					<small class="article-votes-count mt-2">
+						{{vote 'label' class='article-vote-label'}}
+					</small>
+				</div>
+				{{/with}}
 			</article>
 		</section>
 	</div>
