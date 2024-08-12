@@ -2598,17 +2598,8 @@ details.collapse summary::-webkit-details-marker {
   position: relative;
 }
 
-.inset-x-0 {
-  left: 0px;
-  right: 0px;
-}
-
 .top-0 {
   top: 0px;
-}
-
-.top-\[50\%\] {
-  top: 50%;
 }
 
 .z-\[1\] {
@@ -2646,10 +2637,6 @@ details.collapse summary::-webkit-details-marker {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .mt-8 {
@@ -2695,6 +2682,10 @@ details.collapse summary::-webkit-details-marker {
   height: 32px;
 }
 
+.h-\[400px\] {
+  height: 400px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -2702,22 +2693,6 @@ details.collapse summary::-webkit-details-marker {
 .h-max {
   height: -moz-max-content;
   height: max-content;
-}
-
-.h-\[250px\] {
-  height: 250px;
-}
-
-.h-\[400px\] {
-  height: 400px;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
-.h-\[350px\] {
-  height: 350px;
 }
 
 .min-h-\[250px\] {
@@ -2872,6 +2847,11 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(26 28 25 / var(--tw-border-opacity));
 }
 
+.border-fc-dark-green {
+  --tw-border-opacity: 1;
+  border-color: rgb(4 149 63 / var(--tw-border-opacity));
+}
+
 .border-fc-dark\/50 {
   border-color: rgb(26 28 25 / 0.5);
 }
@@ -2896,6 +2876,10 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(26 28 25 / var(--tw-bg-opacity));
 }
 
+.bg-fc-dark-green\/85 {
+  background-color: rgb(4 149 63 / 0.85);
+}
+
 .bg-fc-green {
   --tw-bg-opacity: 1;
   background-color: rgb(7 244 104 / var(--tw-bg-opacity));
@@ -2916,11 +2900,6 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-fc-dark-green {
-  --tw-bg-opacity: 1;
-  background-color: rgb(4 149 63 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -2935,10 +2914,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-gradient-to: #04953F var(--tw-gradient-to-position);
 }
 
-.bg-top {
-  background-position: top;
-}
-
 .stroke-current {
   stroke: currentColor;
 }
@@ -2948,29 +2923,14 @@ details.collapse summary::-webkit-details-marker {
      object-fit: cover;
 }
 
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
-
-.object-top {
-  -o-object-position: top;
-     object-position: top;
-}
-
-.object-\[center_top\] {
-  -o-object-position: center top;
-     object-position: center top;
-}
-
-.object-\[50\%_30\%\] {
-  -o-object-position: 50% 30%;
-     object-position: 50% 30%;
-}
-
 .object-\[50\%_25\%\] {
   -o-object-position: 50% 25%;
      object-position: 50% 25%;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-0 {
@@ -3051,6 +3011,11 @@ details.collapse summary::-webkit-details-marker {
   line-height: 2.5rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -3069,11 +3034,6 @@ details.collapse summary::-webkit-details-marker {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -3116,11 +3076,6 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-fc-green {
-  --tw-text-opacity: 1;
-  color: rgb(7 244 104 / var(--tw-text-opacity));
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -3141,10 +3096,6 @@ details.collapse summary::-webkit-details-marker {
 
 .outline {
   outline-style: solid;
-}
-
-.outline-fc-green {
-  outline-color: #07F468;
 }
 
 /* Do not change this */
@@ -3410,9 +3361,14 @@ form footer input[type="submit"] {
   border-color: rgb(7 244 104 / var(--tw-border-opacity));
 }
 
-.hover\:border-fc-dark-green:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(4 149 63 / var(--tw-border-opacity));
+.hover\:bg-fc-dark:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 28 25 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-fc-dark-green:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 149 63 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-fc-green:hover {
@@ -3422,21 +3378,6 @@ form footer input[type="submit"] {
 
 .hover\:bg-fc-green\/85:hover {
   background-color: rgb(7 244 104 / 0.85);
-}
-
-.hover\:bg-fc-dark-green:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(4 149 63 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-fc-dark:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(26 28 25 / var(--tw-bg-opacity));
-}
-
-.hover\:text-fc-dark:hover {
-  --tw-text-opacity: 1;
-  color: rgb(26 28 25 / var(--tw-text-opacity));
 }
 
 .hover\:text-fc-dark-green:hover {
@@ -3456,10 +3397,6 @@ form footer input[type="submit"] {
 
 .hover\:no-underline:hover {
   text-decoration-line: none;
-}
-
-.hover\:outline-fc-dark-green:hover {
-  outline-color: #04953F;
 }
 
 .focus\:border-fc-green:focus {
@@ -3580,6 +3517,11 @@ form footer input[type="submit"] {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 

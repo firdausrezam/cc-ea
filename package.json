@@ -1,6 +1,6 @@
 {
 	"name": "cc-ea",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"description": "Custom Commerce EA v2.0",
 	"main": "index.js",
 	"scripts": {
